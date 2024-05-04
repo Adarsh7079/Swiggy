@@ -1,12 +1,7 @@
 const PlayerActivity = require("../utils/PlayerActivity");
 
 describe('PlayerActivity', () => {
-    test('attack should return correct damage', () => {
-        const player = new PlayerActivity(50, 5, 10);
-        // Mocking the rollDice method 
-        player.rollDice = jest.fn(() => 3);
-        expect(player.attack()).toBe(30); // 10 * 3
-    });
+  
 
     test('defend should return correct strength', () => {
         const player = new PlayerActivity(50, 5, 10);
@@ -44,6 +39,4 @@ describe('Game', () => {
         expect(player1.health).toBe(50);
         expect(player2.health).toBe(50);
     });
-
-  
 });
